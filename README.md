@@ -31,13 +31,18 @@ GIT:
 ---
 
     1) laptop <-> website
-
+        git config --global user.name "xxxxxx"
+        git config --global user.email "xxxxxx"
 
     2) Project <-> Repository
     =========================
-
+        git init
+        git remote add origin URL(project repository url)
+        git remote -v
     3) Code Sync
     ============
-        git add .
-        git commit -m "xxxxxxx"
+        git add .               (changes -> staged changes)
+        git commit -m "xxxxxxx" (staged changes -> zero)
         git push
+
+        git push --set-upstream origin master -f

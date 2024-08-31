@@ -36,3 +36,14 @@ form {
 input {
     padding: 10px;
 }
+
+button {
+    width: 100px;
+    align-self: center;
+    height: 35px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px gray;
+}
