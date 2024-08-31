@@ -1,0 +1,14 @@
+<div class="view-account-container">
+    <div class="view-container">
+        <h1>Account Details</h1>
+        <img src="{{bankAccount.profile_picture}}" alt="">
+        <div class="details-container">
+            <pre>ACCOUNT NAME:<span>{{bankAccount.account_name}}</span></pre>
+            <pre>AVAILABLE BALANCE:<span>{{bankAccount.available_balance}}</span></pre>
+            <pre>ACCOUNT NUMBER:<span>{{bankAccount.account_number}}</span></pre>
+            <pre>CITY:<span>{{bankAccount.city}}</span></pre>
+            <pre>ID:<span>{{bankAccount.id}}</span></pre>
+        </div>
+        <button (click)="back()">BACK</button>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="app-container">
+    <div class="container" *ngFor="let photo of photos">
+        <img src="{{photo.url}}" alt="memes">
+        <div>
+            <pre>ID: <span>{{photo.id}}</span></pre>
+            <pre>NAME: <span>{{photo.name}}</span></pre>
+            <pre>BOX COUNT: <span>{{photo.box_count}}</span></pre>
+            <pre>CAPTION: <span>{{photo.captions}}</span></pre>
+        </div>
+    </div>
+</div>

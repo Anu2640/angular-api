@@ -1,0 +1,20 @@
+<div class="view-data-container">
+    <div class="app-container">
+        <div class="logo-container">
+            <img src="{{student.school_logo}}" alt="logo">
+            <h1>{{student.school_name}}</h1>
+        </div>
+        <img src="{{student.profile_picture}}" alt="profile">
+        <div >
+            <pre>NAME: <span>{{student.name}}</span></pre>
+            <pre>PHONE: <span>{{student.phone}}</span></pre>
+            <pre>CITY: <span>{{student.city}}</span></pre>
+            <pre>DOB: <span>{{student.dob}}</span></pre>
+            <pre>EMAIL: <span>{{student.email}}</span></pre>
+            <pre>SCHOOL CITY: <span>{{student.school_city}}</span></pre>
+            <pre>SCHOOL PIN: <span>{{student.school_pin}}</span></pre>
+            <pre>ID: <span>{{student.id}}</span></pre>
+        </div>
+        <button (click)="back()">BACK</button>
+    </div>
+</div>

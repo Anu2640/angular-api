@@ -1,0 +1,67 @@
+.view-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    font-family: 'Poppins', sans-serif;
+}
+
+.view-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.view-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.view-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 4px solid #74ebd5;
+}
+
+.details-container pre {
+    font-size: 18px;
+    color: #666;
+    margin: 15px 0;
+    font-weight: 600;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.details-container pre span {
+    display: inline-block;
+    margin-left: 15px;
+    color: #000;
+    font-weight: 400;
+}
+
+button {
+    background: #74ebd5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #ACB6E5;
+}

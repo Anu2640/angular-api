@@ -1,0 +1,92 @@
+.view-data-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.app-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-container>img{
+    width: 90px;
+    height: 90px;
+}
+
+
+.app-container h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #007bff;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.app-container pre {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    background: none;
+    border: none;
+}
+
+.app-container pre span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+.app-container div:nth-child(1),
+.app-container div:nth-child(3) {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+
+    .app-container div:nth-child(1),
+    .app-container div:nth-child(3) {
+        grid-column: span 1;
+    }
+}
+
+button {
+    background: #74ebd5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #435edb;
+}

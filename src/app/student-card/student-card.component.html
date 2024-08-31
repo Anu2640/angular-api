@@ -1,0 +1,58 @@
+<div class="app-container">
+
+    <div class="top-container">
+        <input type="text" placeholder="search student" [(ngModel)]="input" (keyup)="filter()">
+        <div>
+            <label for="column">Sort by column</label>
+            <select name="" id="column" [(ngModel)]="column">
+                <option value="select">select</option>
+                <option value="name">name</option>
+                <option value="city">city</option>
+            </select>
+            <label for="order">Sort by order</label>
+            <select name="" id="order" [(ngModel)]="order">
+                <option value="asc" >Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+            <button (click)="sort()">sort</button>
+        </div>
+        <div>
+            <label for="limit">limit</label>
+            <input type="number" placeholder="enter number" [(ngModel)]="limit">
+            <label for="">page</label>
+            <input type="number" placeholder="enter number" [(ngModel)]="page">
+            <button (click)="paginate()">paginate</button>
+        </div>
+    </div>
+
+    <div class="bottom-container">
+        <div *ngFor="let student of studentsList" class="card-container">
+            <div class="top">
+                <img src="{{student.school_logo}}" alt="logo" class="logo-img">
+                <h2>{{student.school_name}}</h2>
+            </div>
+            <div class="middle">
+                <div>
+                    <pre>NAME:  <span>{{student.name}}</span></pre>
+                    <pre>PHONE: <span>{{student.phone}}</span></pre>
+                    <pre>DOB:   <span>{{student.dob}}</span></pre>
+                    <pre>CITY:  <span>{{student.city}}</span></pre>
+                    <pre>EMAIL: <span>{{student.email}}</span></pre>
+                    <pre>ID:    <span>{{student.id}}</span></pre>
+                </div>
+                <img src="{{student.profile_picture}}" alt="profile image" class="profile-img">
+            </div>
+            <div class="bottom">
+                <div class="bottom-content">
+                    <pre>SCHOOL CITY: <span>{{student.school_city}}</span></pre>
+                    <pre>SCHOOL PIN: <span>{{student.school_pin}}</span></pre>
+                </div>
+                <div class="bottom-content">
+                    <button class="btn btn-view" (click)="view(student.id)">view</button>
+                    <button class="btn btn-edit"(click)="edit(student.id)">edit</button>
+                    <button class="btn btn-delete" (click)="delete(student.id)">delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

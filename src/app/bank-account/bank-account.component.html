@@ -1,0 +1,59 @@
+<div class="app-container">
+    <h1>Bank Account Details</h1>
+    <div class="top-container">
+        <input type="text" placeholder="search account" [(ngModel)]="input" (keyup)="filter()">
+        <div>
+            <label for="column">Sort by column</label>
+            <select name="" id="column" [(ngModel)]="column">
+                <option value="select">select</option>
+                <option value="account_name">name</option>
+                <option value="city">city</option>
+            </select>
+            <label for="order">Sort by order</label>
+            <select name="" id="order" [(ngModel)]="order">
+                <option value="asc" >Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+            <button (click)="sort()">sort</button>
+        </div>
+        <div>
+            <label for="limit">limit</label>
+            <input type="number" placeholder="enter number" [(ngModel)]="limit">
+            <label for="">page</label>
+            <input type="number" placeholder="enter number" [(ngModel)]="page">
+            <button (click)="paginate()">paginate</button>
+        </div>
+    </div>
+    <div class="main-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ACCOUNT NAME</th>
+                    <th>AVAILABLE BALANCE</th>
+                    <th>ACCOUNT NUMBER</th>
+                    <th>CITY</th>
+                    <th>PROFILE</th>
+                    <th>ID</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let account of bankAccounts">
+                    <td>{{account.account_name}}</td>
+                    <td>{{account.available_balance}}</td>
+                    <td>{{account.account_number}}</td>
+                    <td>{{account.city}}</td>
+                    <td>
+                        <img class="pic" src="{{account.profie_picture}}" alt="profile">
+                    </td>
+                    <td>{{account.id}}</td>
+                    <td>
+                        <button (click)="viewAccount(account.id)">View</button>
+                        <button (click)="editAccount(account.id)">Edit</button>
+                        <button (click)="deleteAccount(account.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

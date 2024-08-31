@@ -1,0 +1,18 @@
+<div class="app-container">
+    <form [formGroup]="bankAccountForm" class="form-container">
+        <h1>{{id?"EDIT BANK ACCOUNT":"CREATE BANK ACCOUNT"}}</h1>
+        <label for="">ACCOUNT NAME:</label>
+        <input type="text" formControlName="account_name"><br>
+        <label for="">AVAILABLE BALANCE:</label>
+        <input type="text" formControlName="available_balance"><br>
+        <label for="">ACCOUNT NUMBER:</label>
+        <input type="text" formControlName="account_number"><br>
+        <label for="">CITY:</label>
+        <input type="text" formControlName="city"><br>
+        <label for="">PROFILE PICTURE:</label>
+        <input type="text" formControlName="profile_picture"><br>
+        <label for="">ID:</label>
+        <input type="text" formControlName="id"><br>
+        <button (click)="createBankAccount()">{{id?"EDIT":"CREATE"}}</button>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="dashboard-container">
+    <div class="left-side-bar">
+        <h1>my website</h1>
+        <a routerLink="student-card">Student Card</a>
+        <a routerLink="create-student-card">Create Student</a>
+        <a routerLink="display-memes">Memes</a>
+        <a routerLink="bank-account">Bank Account</a>
+        <a routerLink="create-bank-account">Create BankAccount</a>
+        <a routerLink="vehicles">vehicles</a>
+        <a routerLink="create-vehicle">create-vehicle</a>
+        <hr>
+        <button (click)="logout()">logout</button>
+    </div>
+    <div class="right-side-bar">
+        <router-outlet></router-outlet>
+    </div>
+</div>

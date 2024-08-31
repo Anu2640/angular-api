@@ -1,0 +1,16 @@
+<div class="app-container">
+    <div class="form-container">
+        <h1>FORM DETAILS</h1>
+        <form [formGroup]="loginForm">
+            <div class="input-container">
+                <label for="mail">ENTER MAIL:</label>
+                <input type="text" id="mail" placeholder="enter mail" formControlName="email">
+            </div>
+            <div class="input-container">
+                <label for="password">ENTER PASSWORD:</label>
+                <input type="password" id="password" placeholder="enter password" formControlName="password">
+            </div>
+            <button (click)="login()">login</button>
+        </form>
+    </div>
+</div>

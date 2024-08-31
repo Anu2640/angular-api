@@ -1,0 +1,26 @@
+<div class="app-container">
+    <form [formGroup]="studentForm">
+        <h1>{{id? "EDIT STUDENT FORM":"CREATE STUDENT FORM"}}</h1>
+        <label for="">NAME:</label>
+        <input type="text" formControlName="name"><br>
+        <label for="">PHONE:</label>
+        <input type="text" formControlName="phone"><br>
+        <label for="">CITY:</label>
+        <input type="text" formControlName="city"><br>
+        <label for="">DOB:</label>
+        <input type="text" formControlName="dob"><br>
+        <label for="">PROFILE PICTURE:</label>
+        <input type="text" formControlName="profile"><br>
+        <label for="">EMAIL:</label>
+        <input type="text" formControlName="email"><br>
+        <label for="">SCHOOL NAME:</label>
+        <input type="text" formControlName="school_name"><br>
+        <label for="">SCHOOL CITY:</label>
+        <input type="text" formControlName="school_city"><br>
+        <label for="">SCHOOL PIN:</label>
+        <input type="text" formControlName="school_pin"><br>
+        <label for="">ID:</label>
+        <input type="text" formControlName="id"><br>
+        <button (click)="createStudent()">{{id?"EDIT":"CREATE"}}</button>
+    </form>
+</div>
